@@ -25,6 +25,7 @@ import java.util.List;
 
 public class PlayerPressurePlateBlock extends AbstractPressurePlateBlock implements ICharmBlock {
     public static final BooleanProperty POWERED = Properties.POWERED;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private final CharmModule module;
 
     public PlayerPressurePlateBlock(CharmModule module) {
@@ -37,6 +38,7 @@ public class PlayerPressurePlateBlock extends AbstractPressurePlateBlock impleme
         this.module = module;
         register(module, "player_pressure_plate");
         setDefaultState(getDefaultState().with(POWERED, false));
+        setDefaultState(getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override
